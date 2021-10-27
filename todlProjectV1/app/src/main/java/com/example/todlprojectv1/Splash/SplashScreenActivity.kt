@@ -1,9 +1,11 @@
-package com.example.todlprojectv1
+package com.example.todlprojectv1.Splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.todlprojectv1.MainActivity
+import com.example.todlprojectv1.R
 
 
 class SplashScreenActivity : AppCompatActivity() {
