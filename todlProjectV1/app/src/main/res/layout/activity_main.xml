@@ -27,14 +27,13 @@ style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating"
-        android:background="?selectableItemBackgroundBorderless"
+        android:soundEffectsEnabled="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:foreground="@drawable/logoicon2"
-        android:src="@drawable/ic_baseline_add_24"
+        android:foreground="@drawable/icon"
+        android:src="@android:drawable/ic_input_add"
         app:layout_anchor="@+id/bottomAppBar"
-        app:layout_anchorGravity="top|center"
-        app:rippleColor="#A36565" />
+        app:layout_anchorGravity="top|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
