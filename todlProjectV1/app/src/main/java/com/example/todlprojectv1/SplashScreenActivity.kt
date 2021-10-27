@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 
+
 class SplashScreenActivity : AppCompatActivity() {
 
             lateinit var handler: Handler
@@ -16,10 +17,10 @@ class SplashScreenActivity : AppCompatActivity() {
                 handler.postDelayed({
 
                     // Delay and Start Activity
-                    val intent = Intent(this,MainActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
-                } , 1000) // here we're delaying to startActivity after 3seconds
+                } , 2000) // here we're delaying to startActivity after 3seconds
 
             }
     }
