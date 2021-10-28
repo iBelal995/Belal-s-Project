@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.example.todlprojectv1.R
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         val fab: View = findViewById(R.id.floating)
         fab.setOnClickListener {
             clickSound.start()// To start the sound on clicking
-            Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show()
-
         }
         }
 
