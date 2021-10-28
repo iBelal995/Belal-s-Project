@@ -11,12 +11,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val clickSound = MediaPlayer.create(this, R.raw.clicksound)//This to create a media player sound
+
+
+        val clickSound =
+            MediaPlayer.create(this, R.raw.clicksound)//This to create a media player sound
         val fab: View = findViewById(R.id.floating)
         fab.setOnClickListener {
             clickSound.start()// To start the sound on clicking
-            Toast.makeText(this,"Hi", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show()
+
+        }
         }
 
     }
-}

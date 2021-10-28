@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.os.Handler
 import com.example.todlprojectv1.view.MainActivity
 import com.example.todlprojectv1.R
+import kotlinx.coroutines.Delay
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -14,6 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_splash_screen)
+
 
                 handler = Handler()
                 handler.postDelayed({
