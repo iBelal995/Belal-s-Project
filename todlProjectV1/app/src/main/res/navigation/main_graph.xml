@@ -33,7 +33,7 @@
             android:id="@+id/action_todlListFragment2_to_todlAddFragment"
             app:destination="@id/todlAddFragment" />
         <action
-            android:id="@+id/action_todlListFragment2_to_subListFragment"
-            app:destination="@id/subListFragment" />
+            android:id="@+id/action_todlListFragment2_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 </navigation>

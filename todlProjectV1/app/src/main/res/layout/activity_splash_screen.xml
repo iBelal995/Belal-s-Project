@@ -8,7 +8,7 @@
     tools:context=".Splash.SplashScreenActivity">
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/logo_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,14 +19,14 @@
         app:srcCompat="@drawable/logoicon2" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/logo_splash_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/logo_splash"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,13 +8,8 @@
         <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.16480263157894737" />
         <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.16480263157894737" />
         <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/drawable/icon.xml" value="0.16480263157894737" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/activity_main.xml" value="0.14490566559218157" />
+        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/activity_main.xml" value="0.19924529018924966" />
         <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.19924529018924966" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/fragment_sub_list.xml" value="0.18421052631578946" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/fragment_todl_add.xml" value="0.2264151024877837" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/fragment_todl_list.xml" value="0.19924529018924966" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/item_layout.xml" value="0.2988679352838745" />
-        <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/layout/item_layout2.xml" value="0.2988679352838745" />
         <entry key="..\:/Users/MSI/Desktop/Belal-s-Project/todlProjectV1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.16480263157894737" />
         <entry key="..\:/Users/kingf/AndroidStudioProjects/todlProjectV1/app/src/main/res/drawable/component_1.xml" value="0.5703125" />
         <entry key="..\:/Users/kingf/AndroidStudioProjects/todlProjectV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5703125" />
@@ -22,6 +17,15 @@
         <entry key="..\:/Users/kingf/AndroidStudioProjects/todlProjectV1/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/kingf/AndroidStudioProjects/todlProjectV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.5" />
         <entry key="..\:/Users/kingf/AndroidStudioProjects/todlProjectV1/app/src/main/res/layout/logo.xml" value="0.5401041666666667" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/drawable/color_shape.xml" value="0.5703125" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.5703125" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/activity_main.xml" value="0.490036231884058" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.490036231884058" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/fragment_details.xml" value="0.415625" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/fragment_sub_list.xml" value="0.40677083333333336" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/fragment_todl_add.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/fragment_todl_list.xml" value="0.5" />
+        <entry key="..\:/Users/kingf/Desktop/Belal-s-Project1/todlProjectV1/app/src/main/res/layout/item_layout2.xml" value="0.33" />
       </map>
     </option>
   </component>

@@ -1,16 +1,19 @@
 package com.example.todlprojectv1.view
 
-import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.RecyclerView
 import com.example.todlprojectv1.R
+import com.example.todlprojectv1.database.TodlModelList
 
 class TodlListFragment : Fragment() {
-
+    private val todelList = mutableListOf<TodlModelList>()
+    private val todlViewModel: TodlViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +26,18 @@ class TodlListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val todelRecycleView: RecyclerView = view.findViewById(R.id.recycle_View)
+        val todlAdapter = TodlAdapter(todelList,todlViewModel)
+
+        todelRecycleView.adapter = todlAdapter
+
+        todlViewModel.todlList.observe(viewLifecycleOwner, Observer {
+            it?.let { list ->
+                todelList.clear()
+                todelList.addAll(list)
+                todlAdapter.notifyDataSetChanged()
+            }
+        })
     }
 
 }
