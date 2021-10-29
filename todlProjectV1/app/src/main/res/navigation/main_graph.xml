@@ -27,8 +27,8 @@
     <fragment
         android:id="@+id/todlListFragment2"
         android:name="com.example.todlprojectv1.view.TodlListFragment"
-        android:label="fragment_todl_list"
-        tools:layout="@layout/fragment_todl_list" >
+        android:label="Home Page"
+        tools:layout="@layout/fragment_todl_list">
         <action
             android:id="@+id/action_todlListFragment2_to_todlAddFragment"
             app:destination="@id/todlAddFragment" />

@@ -18,9 +18,11 @@ class TodlViewModel:ViewModel() {
     var selectedListMutableLiveData = MutableLiveData<TodlModelList>()
 
 
-    fun addList(taskTitle: String, subTaskTitle: String, prio: String){
+    fun addList(taskTitle: String, subTaskTitle: String, prio: Int){
+
             viewModelScope.launch {
-                todlRepository.addList(TodlModelList(taskTitle,subTaskTitle,prio))
+                todlRepository.addList(TodlModelList(taskTitle, subTaskTitle, prio))
+            }
 
 }
         fun updateList(todlModelList: TodlModelList) {
@@ -34,6 +36,6 @@ class TodlViewModel:ViewModel() {
                 todlRepository.deleteList(todlModelList)
             }
         }
-    }
+
 
     }
