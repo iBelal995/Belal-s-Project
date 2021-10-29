@@ -1,5 +1,7 @@
 package com.example.todlprojectv1.view
 
+import android.app.DatePickerDialog
+import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todlprojectv1.R
+import com.example.todlprojectv1.database.TodlModelList
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
@@ -29,30 +32,41 @@ class TodlAddFragment : BottomSheetDialogFragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val taskTitle: EditText = view.findViewById(R.id.Tasktitle_edittext_add)
-        val subTaskTitle: EditText = view.findViewById(R.id.Subtitle_edittext_add)
-        val priority: RadioGroup = view.findViewById(R.id.radio_group)
-        val high :RadioButton = view.findViewById(R.id.radioButton_high)
-        val medium :RadioButton = view.findViewById(R.id.radioButton_medium)
-        val low :RadioButton = view.findViewById(R.id.radioButton_low)
-        val addButton: Button = view.findViewById(R.id.Add_button_addlist)
-        val cancleButton: Button = view.findViewById(R.id.Cancle_button_addlist)
+        val taskTitle: EditText = view.findViewById(R.id.SubTasktitle_edittext_add)
+        val priority: RadioGroup = view.findViewById(R.id.radio_group_SubList)
+        val addButton: Button = view.findViewById(R.id.Add_button_addlist_SubList)
+        val cancleButton: Button = view.findViewById(R.id.Cancle_button_addlist_SubList)
+        val calnder:Button = view.findViewById(R.id.Calendar_button_add)
+        val calnderinstance = Calendar.getInstance()
+        var due: Long? = null
+
         addButton.setOnClickListener {
-            val task = taskTitle.text
-            val subtask = subTaskTitle.text
-            val prio = priority.checkedRadioButtonId
-
-                todlViewModel.addList(task.toString(), subtask.toString(), prio.toString())
-
-
+            val task = taskTitle.text.toString()
+            var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
+            var prio = priorityRadioButton.text.toString()
+                todlViewModel.addList(TodlModelList(task,prio,due,false))
             findNavController().popBackStack()
-
         }
             cancleButton.setOnClickListener {
                 findNavController().popBackStack()
-
+            }
+        val dateSetListener =
+            DatePickerDialog.OnDateSetListener { view, _, _, _ ->
+                calnderinstance.set(Calendar.YEAR,0)
+                calnderinstance.set(Calendar.MONTH,0)
+                calnderinstance.set(Calendar.DAY_OF_MONTH,0)
+                due = calnderinstance.timeInMillis
             }
 
+        calnder.setOnClickListener {
+            DatePickerDialog(
+                requireActivity(),
+                dateSetListener,
+                calnderinstance.get(Calendar.YEAR),
+                calnderinstance.get(Calendar.MONTH),
+                calnderinstance.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
     }
 }
 

@@ -8,9 +8,9 @@ interface TodlDao {
     @Insert
     suspend fun addList(todlModelList: TodlModelList)
 
-
+    @Transaction
     @Query("SELECT * FROM todlmodellist")
-    fun getList() : LiveData<List<TodlModelList>>
+    fun getList() : LiveData<List<MainTaskWithSubTask>>
 
 
     @Update

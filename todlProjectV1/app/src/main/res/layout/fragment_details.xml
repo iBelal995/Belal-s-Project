@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.DetailsFragment">
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    app:strokeColor="#E6F8FF"
+    app:strokeWidth="5dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</FrameLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

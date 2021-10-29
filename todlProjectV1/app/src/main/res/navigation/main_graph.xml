@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/todlAddFragment"
         android:name="com.example.todlprojectv1.view.TodlAddFragment"
-        android:label="fragment_todl_add"
+        android:label="New Task"
         tools:layout="@layout/fragment_todl_add" />
     <fragment
         android:id="@+id/detailsFragment"
@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_subListFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_subListFragment_to_subListAddFragment"
+            app:destination="@id/subListAddFragment" />
     </fragment>
     <fragment
         android:id="@+id/todlListFragment2"
@@ -33,7 +36,12 @@
             android:id="@+id/action_todlListFragment2_to_todlAddFragment"
             app:destination="@id/todlAddFragment" />
         <action
-            android:id="@+id/action_todlListFragment2_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_todlListFragment2_to_subListFragment"
+            app:destination="@id/subListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/subListAddFragment"
+        android:name="com.example.todlprojectv1.view.SubListAddFragment"
+        android:label="fragment_sub_list_add"
+        tools:layout="@layout/fragment_sub_list_add" />
 </navigation>
