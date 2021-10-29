@@ -36,7 +36,7 @@ class TodlAdapter(val listTask: List<TodlModelList>,val todelViewModel: TodlView
         val list = listTask[position]
 
         holder.taskTitlea.text = list.taskTitle
-        holder.taskPrioritya.text = list.priority.toString()
+        holder.taskPrioritya.text = list.priority
         holder.edit.setOnClickListener{it ->
             todelViewModel.selectedListMutableLiveData.postValue(list)
             it.findNavController().navigate(R.id.action_todlListFragment2_to_detailsFragment)

@@ -18,7 +18,7 @@ class TodlViewModel:ViewModel() {
     var selectedListMutableLiveData = MutableLiveData<TodlModelList>()
 
 
-    fun addList(taskTitle: String, subTaskTitle: String, prio: Int){
+    fun addList(taskTitle: String, subTaskTitle: String, prio: String){
 
             viewModelScope.launch {
                 todlRepository.addList(TodlModelList(taskTitle, subTaskTitle, prio))

@@ -42,7 +42,7 @@ class TodlAddFragment : BottomSheetDialogFragment() {
             val subtask = subTaskTitle.text
             val prio = priority.checkedRadioButtonId
 
-                todlViewModel.addList(task.toString(), subtask.toString(), prio)
+                todlViewModel.addList(task.toString(), subtask.toString(), prio.toString())
 
 
             findNavController().popBackStack()
