@@ -45,7 +45,7 @@ class TodlSubAdapter(val listsubTask: List<MainTaskWithSubTask>, val todlViewMod
                 "Low" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9F6DFF4D"))
             }
             holder.subdelete.setOnClickListener {
-                todlViewModel.deleteList(lists)
+                todlViewModel.deletesubList(lists)
             }
         }
 
