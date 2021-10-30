@@ -12,13 +12,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todlprojectv1.R
 import com.example.todlprojectv1.database.MainTaskWithSubTask
+import com.example.todlprojectv1.database.TodlModelSubList
 import com.example.todlprojectv1.view.TodlViewModel
 import com.example.todlprojectv1.view.list.TodlAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class SubListFragment : Fragment() {
-    private val todelList = mutableListOf<MainTaskWithSubTask>()
+    private val todlsubList = mutableListOf<TodlModelSubList> ()
     private val todlViewModel: TodlViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -32,13 +33,13 @@ class SubListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val todelsubRecycleView: RecyclerView = view.findViewById(R.id.recycle_View_Sub)
-        val todlsubAdapter = TodlSubAdapter(todelList, todlViewModel)
+        val todlsubAdapter = TodlSubAdapter(todlsubList, todlViewModel)
 
         todelsubRecycleView.adapter = todlsubAdapter
-        todlViewModel.todlList.observe(viewLifecycleOwner, Observer {
+        todlViewModel.todlsubbList.observe(viewLifecycleOwner, Observer {
             it?.let { list ->
-                todelList.clear()
-                todelList.addAll(list)
+                todlsubList.clear()
+                todlsubList.addAll(list)
                 todlsubAdapter.notifyDataSetChanged() } })
         val fab: FloatingActionButton = view.findViewById(R.id.floating_subList)
         fab.setOnClickListener {

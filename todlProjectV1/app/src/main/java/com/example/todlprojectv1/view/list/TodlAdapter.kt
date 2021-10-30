@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.todlprojectv1.R
 import com.example.todlprojectv1.database.MainTaskWithSubTask
 import com.example.todlprojectv1.view.TodlViewModel
+import java.text.SimpleDateFormat
 
 
 class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
@@ -18,6 +19,7 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         val taskTitlea:TextView = view.findViewById(R.id.List_TextView)
         val taskPrioritya:TextView= view.findViewById(R.id.List__prio_TextView)
         val delete: Button = view.findViewById(R.id.delete_button)
+        val creationdate:TextView = view.findViewById(R.id.creationdate)
 
     }
 
@@ -33,6 +35,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
 
     override fun onBindViewHolder(holder: TodelViewHolder, position: Int) {
         val list = listTask[position].task
+        val creationDate = list.creationDate
+        holder.creationdate.text = SimpleDateFormat("dd/MM/yy").format(creationDate)
         holder.taskTitlea.text = list.taskTitle.toUpperCase()
         holder.taskPrioritya.text = list.priority
         when(list.priority){

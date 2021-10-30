@@ -21,7 +21,7 @@
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="#7B7B7B" />
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/subList__prio_TextView"
@@ -29,13 +29,13 @@
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:gravity="center"
-            android:textColor="#7B7B7B" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/subdelete_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="20dp"
             android:background="@android:color/transparent"
             android:foreground="@android:drawable/ic_menu_delete"
             android:gravity="center" />

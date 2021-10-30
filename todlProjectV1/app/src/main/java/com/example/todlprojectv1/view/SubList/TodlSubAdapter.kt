@@ -14,7 +14,7 @@ import com.example.todlprojectv1.database.MainTaskWithSubTask
 import com.example.todlprojectv1.database.TodlModelSubList
 import com.example.todlprojectv1.view.TodlViewModel
 
-class TodlSubAdapter(val listsubTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel): RecyclerView.Adapter<TodlSubAdapter.TodelSubViewHolder>() {
+class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel: TodlViewModel): RecyclerView.Adapter<TodlSubAdapter.TodelSubViewHolder>() {
     class TodelSubViewHolder(view: View):RecyclerView.ViewHolder(view){
         val sub_task:TextView = view.findViewById(R.id.subList_TextView)
         val subtaskprio:TextView = view.findViewById(R.id.subList__prio_TextView)
@@ -31,14 +31,9 @@ class TodlSubAdapter(val listsubTask: List<MainTaskWithSubTask>, val todlViewMod
     }
 
     override fun onBindViewHolder(holder: TodelSubViewHolder, position: Int) {
-        val lists = listsubTask[position].subTask
-        if (lists != null) {
-            holder.sub_task.text = lists.subTask
-        }
-        if (lists != null) {
+        val lists = listsubTask[position]
+            holder.sub_task.text = lists.subTask.uppercase()
             holder.subtaskprio.text =lists.prioritysub
-        }
-        if (lists != null) {
             when(lists.prioritysub){
                 "High"-> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9FFD2E2E"))
                 "Med"-> holder.subtaskprio.setBackgroundColor(Color.parseColor("#A1FFB74D"))
@@ -49,7 +44,7 @@ class TodlSubAdapter(val listsubTask: List<MainTaskWithSubTask>, val todlViewMod
             }
         }
 
-    }
+
 
 
     override fun getItemCount(): Int {

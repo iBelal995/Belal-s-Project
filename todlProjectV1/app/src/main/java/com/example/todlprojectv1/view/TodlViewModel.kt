@@ -14,9 +14,11 @@ class TodlViewModel:ViewModel() {
     private val todlRepository = TodlRepository.get()
 
     var todlList = todlRepository.getList()
+    var todlsubbList = todlRepository.getsubList()
 
 
     var list: TodlModelList? = null
+    var lists: TodlModelSubList? = null
     var selectedListMutableLiveData = MutableLiveData<TodlModelList>()
 
 

@@ -10,6 +10,7 @@ data class TodlModelList(
     val taskTitle:String,
     val priority: String,
     var dueDate: Long?,
+    var creationDate: Long,
     var completed: Boolean,
     @PrimaryKey(autoGenerate = true)
     val taskId: Int =0
@@ -17,10 +18,9 @@ data class TodlModelList(
 @Entity
 data class TodlModelSubList(
     val subTask:String,
+    val prioritysub:String,
     val description:String,
-    val prioritysub : String,
-    var creationDate: Long,
-    val mainTaskId:Int,
+    val mainTaskId: Int,
     @PrimaryKey(autoGenerate = true)
     val subTaskId: Int = 0
 )
@@ -30,5 +30,5 @@ data class MainTaskWithSubTask(
         parentColumn = "taskId",
         entityColumn = "mainTaskId"
     )
-    val subTask: TodlModelSubList?
+    val subTask: List<TodlModelSubList>
 )

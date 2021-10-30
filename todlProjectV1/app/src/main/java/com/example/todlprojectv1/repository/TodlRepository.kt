@@ -19,6 +19,7 @@ class TodlRepository(context:Context) {
 
     // In turn, you can use the methods from the DAO instance to interact with the database:
     fun getList() = todlDao.getList()
+    fun getsubList() = todlDao.getsubList()
 
     suspend fun addList(todlModelList:TodlModelList) = todlDao.addList(todlModelList)
     suspend fun updateList(todlModelList: TodlModelList) = todlDao.updateList(todlModelList)

@@ -38,6 +38,7 @@ class TodlAddFragment : BottomSheetDialogFragment() {
         val addButton: Button = view.findViewById(R.id.Add_button_addlist)
         val cancleButton: Button = view.findViewById(R.id.Cancle_button_addlist)
         val calnder:Button = view.findViewById(R.id.Calendar_button_add)
+        val creationDate = Calendar.getInstance().timeInMillis
         val calnderinstance = Calendar.getInstance()
         var due: Long? = null
 
@@ -45,7 +46,7 @@ class TodlAddFragment : BottomSheetDialogFragment() {
             val task = taskTitle.text.toString()
             var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
             var prio = priorityRadioButton.text.toString()
-                todlViewModel.addList(TodlModelList(task,prio,due,false))
+                todlViewModel.addList(TodlModelList(task,prio,due,creationDate,false))
             findNavController().popBackStack()
         }
             cancleButton.setOnClickListener {

@@ -36,7 +36,9 @@ class TodlListFragment : Fragment() {
             it?.let { list ->
                 todelList.clear()
                 todelList.addAll(list)
-                todlAdapter.notifyDataSetChanged() } })
+
+                todlAdapter.notifyDataSetChanged()
+            } })
         val fab: FloatingActionButton = view.findViewById(R.id.floating_List)
         fab.setOnClickListener {
             var mediaPlayer = MediaPlayer.create(context, R.raw.clicksound)
