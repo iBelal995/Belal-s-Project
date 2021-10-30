@@ -23,9 +23,9 @@ class TodlRepository(context:Context) {
     suspend fun addList(todlModelList:TodlModelList) = todlDao.addList(todlModelList)
     suspend fun updateList(todlModelList: TodlModelList) = todlDao.updateList(todlModelList)
     suspend fun deleteList(todlModelList: TodlModelList) = todlDao.deleteList(todlModelList)
-    suspend fun addList(todlModesublList:TodlModelSubList) = todlDao.addList(todlModesublList)
-    suspend fun updateList(todlModesublList: TodlModelSubList) = todlDao.updateList(todlModesublList)
-    suspend fun deleteList(todlModesublList: TodlModelSubList) = todlDao.deleteList(todlModesublList)
+    suspend fun addsubList(todlModesublList:TodlModelSubList) = todlDao.addsubList(todlModesublList)
+    suspend fun updatesubList(todlModesublList: TodlModelSubList) = todlDao.updatesubList(todlModesublList)
+    suspend fun deletesubList(todlModesublList: TodlModelSubList) = todlDao.deletesubList(todlModesublList)
 
 
     /***

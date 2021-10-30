@@ -7,19 +7,22 @@ import androidx.room.*
 interface TodlDao {
     @Insert
     suspend fun addList(todlModelList: TodlModelList)
-    suspend fun addList(todlModesublList: TodlModelSubList)
+    @Insert
+    suspend fun addsubList(todlModesublList: TodlModelSubList)
 
     @Transaction
-    @Query("SELECT * FROM todlmodellist,todlmodelsublist")
+    @Query("SELECT * FROM todlmodellist")
     fun getList() : LiveData<List<MainTaskWithSubTask>>
 
 
     @Update
     suspend fun updateList(todlModelList: TodlModelList)
-    suspend fun updateList(todlModesublList: TodlModelSubList)
+    @Update
+    suspend fun updatesubList(todlModesublList: TodlModelSubList)
 
 
     @Delete
     suspend fun deleteList(todlModelList: TodlModelList)
-    suspend fun deleteList(todlModesublList: TodlModelSubList)
+    @Delete
+    suspend fun deletesubList(todlModesublList: TodlModelSubList)
 }
