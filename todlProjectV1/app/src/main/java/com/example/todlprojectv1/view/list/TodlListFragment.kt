@@ -40,11 +40,11 @@ class TodlListFragment : Fragment() {
                 todlAdapter.notifyDataSetChanged()
             } })
         val fab: FloatingActionButton = view.findViewById(R.id.floating_List)
+        val addBottomSheet = TodlAddFragment()
         fab.setOnClickListener {
             var mediaPlayer = MediaPlayer.create(context, R.raw.clicksound)
             mediaPlayer.start()// To start the sound on clicking
-
-            findNavController().navigate(R.id.action_todlListFragment2_to_todlAddFragment)
+            addBottomSheet.show(requireActivity().supportFragmentManager,"")
         } }
 
 }

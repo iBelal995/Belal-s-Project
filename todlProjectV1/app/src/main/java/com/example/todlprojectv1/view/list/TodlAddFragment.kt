@@ -47,10 +47,10 @@ class TodlAddFragment : BottomSheetDialogFragment() {
             var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
             var prio = priorityRadioButton.text.toString()
                 todlViewModel.addList(TodlModelList(task,prio,due,creationDate,false))
-            findNavController().popBackStack()
+                dismiss()
         }
             cancleButton.setOnClickListener {
-                findNavController().popBackStack()
+                dismiss()
             }
         val dateSetListener =
             DatePickerDialog.OnDateSetListener { view, _, _, _ ->

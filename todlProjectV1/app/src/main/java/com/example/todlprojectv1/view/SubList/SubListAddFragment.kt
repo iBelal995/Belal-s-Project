@@ -13,6 +13,7 @@ import com.example.todlprojectv1.R
 import com.example.todlprojectv1.database.TodlModelSubList
 import com.example.todlprojectv1.view.TodlViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import kotlin.contracts.Returns
 
 class SubListAddFragment : BottomSheetDialogFragment() {
     private val todlViewModel: TodlViewModel by activityViewModels()
@@ -31,7 +32,7 @@ class SubListAddFragment : BottomSheetDialogFragment() {
         val addButton: Button = view.findViewById(R.id.Add_button_addlist_sub)
         val cancleButton: Button = view.findViewById(R.id.Cancle_button_addlist_sub)
         val description:String=""
-        val mainId: Int = 0
+        val mainId: Int = todlViewModel.selectedItemId
 
         addButton.setOnClickListener {
             val subtask = tasksubTitle.text.toString()
@@ -40,11 +41,11 @@ class SubListAddFragment : BottomSheetDialogFragment() {
             var des=description
             var mainId = mainId
             todlViewModel.addsubList(TodlModelSubList(subtask,subprio,des,mainId ))
-            findNavController().popBackStack()
+            dismiss()
         }
         cancleButton.setOnClickListener {
-            findNavController().popBackStack()
-        }
+           dismiss()
+       }
 
 
 

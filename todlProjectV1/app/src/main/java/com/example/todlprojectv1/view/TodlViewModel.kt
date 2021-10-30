@@ -14,12 +14,12 @@ class TodlViewModel:ViewModel() {
     private val todlRepository = TodlRepository.get()
 
     var todlList = todlRepository.getList()
-    var todlsubbList = todlRepository.getsubList()
+    fun todlsubList (taskId:Int)= todlRepository.getsubList(taskId)
+    var selectedItemId = 0
 
 
-    var list: TodlModelList? = null
-    var lists: TodlModelSubList? = null
-    var selectedListMutableLiveData = MutableLiveData<TodlModelList>()
+    //var selectedListMutableLiveData = MutableLiveData<List<TodlModelSubList>>()//نقل الداتا من تو دو لست الى السب لست
+    var selectedListSubMutableLiveData = MutableLiveData<TodlModelSubList>()//من السب لست الى الديتيلز
 
 
     fun addList(todlModelList:TodlModelList){
@@ -40,7 +40,7 @@ class TodlViewModel:ViewModel() {
                 todlRepository.deleteList(todlModelList)
             }
         }
-
+// sub task opreations
     fun addsubList(todlModelSubList:TodlModelSubList){
 
         viewModelScope.launch {

@@ -36,16 +36,16 @@ class SubListFragment : Fragment() {
         val todlsubAdapter = TodlSubAdapter(todlsubList, todlViewModel)
 
         todelsubRecycleView.adapter = todlsubAdapter
-        todlViewModel.todlsubbList.observe(viewLifecycleOwner, Observer {
+        todlViewModel.todlsubList(todlViewModel.selectedItemId).observe(viewLifecycleOwner, Observer {
             it?.let { list ->
                 todlsubList.clear()
                 todlsubList.addAll(list)
                 todlsubAdapter.notifyDataSetChanged() } })
         val fab: FloatingActionButton = view.findViewById(R.id.floating_subList)
+        val addBottomSheet = SubListAddFragment()
         fab.setOnClickListener {
             var mediaPlayer = MediaPlayer.create(context, R.raw.clicksound)
             mediaPlayer.start()// To start the sound on clicking
-
-            findNavController().navigate(R.id.action_subListFragment_to_subListAddFragment)
+            addBottomSheet.show(requireActivity().supportFragmentManager,"")
         } }
     }

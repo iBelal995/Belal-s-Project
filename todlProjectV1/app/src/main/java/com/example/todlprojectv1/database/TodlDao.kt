@@ -13,9 +13,8 @@ interface TodlDao {
     @Transaction
     @Query("SELECT * FROM todlmodellist")
     fun getList() : LiveData<List<MainTaskWithSubTask>>
-
-    @Query("SELECT * FROM todlmodelsublist")
-    fun getsubList() : LiveData<List<TodlModelSubList>>
+    @Query("SELECT * FROM todlmodelsublist WHERE mainTaskId = :taskId")
+    fun getsubList(taskId:Int):LiveData<List<TodlModelSubList>>
 
 
     @Update

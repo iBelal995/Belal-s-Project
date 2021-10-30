@@ -46,7 +46,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         }
 
         holder.itemView.setOnClickListener{it ->
-            todlViewModel.selectedListMutableLiveData.postValue(list)
+            todlViewModel.selectedItemId = list.taskId
+         //   todlViewModel.selectedListMutableLiveData.postValue(listTask[position].subTask)//ارسال السب تاسك الخاصة بالمين الى فراقمنت الساب التاسك
             it.findNavController().navigate(R.id.action_todlListFragment2_to_subListFragment)
 
         }
