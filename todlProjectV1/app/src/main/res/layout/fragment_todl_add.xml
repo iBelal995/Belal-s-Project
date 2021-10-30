@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".view.TodlAddFragment">
+    tools:context=".view.list.TodlAddFragment">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003">
+        app:layout_constraintVertical_bias="0.16000003"
+        app:strokeColor="#E6F8FF"
+        app:strokeWidth="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,12 +29,13 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="Add your Task"
-                android:textColor="#000000"
+                android:textColor="#7B7B7B"
                 android:textSize="34sp" />
 
             <EditText
-                android:id="@+id/SubTasktitle_edittext_add"
+                android:id="@+id/Tasktitle_edittext_add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -62,7 +65,7 @@
                         android:textSize="16sp" />
 
                     <RadioGroup
-                        android:id="@+id/radio_group_SubList"
+                        android:id="@+id/radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -70,10 +73,10 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/radioButton_high_SubList"
+                            android:id="@+id/radioButton_high"
                             android:layout_width="85dp"
                             android:layout_height="30dp"
-                            android:background="#FD2E2E"
+                            android:background="#9FFD2E2E"
                             android:bufferType="normal"
                             android:checked="false"
                             android:clickable="true"
@@ -81,10 +84,10 @@
                             android:text="High" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_medium_SubList"
+                            android:id="@+id/radioButton_medium"
                             android:layout_width="85dp"
                             android:layout_height="30dp"
-                            android:background="#FFB74D"
+                            android:background="#A1FFB74D"
                             android:bufferType="normal"
                             android:checked="false"
                             android:clickable="true"
@@ -94,10 +97,10 @@
                             tools:layout_editor_absoluteY="335dp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton_low_SubList"
+                            android:id="@+id/radioButton_low"
                             android:layout_width="85dp"
                             android:layout_height="30dp"
-                            android:background="#6DFF4D"
+                            android:background="#9F6DFF4D"
                             android:bufferType="normal"
                             android:checked="false"
                             android:clickable="true"
@@ -142,7 +145,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/Cancle_button_addlist_SubList"
+                    android:id="@+id/Cancle_button_addlist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -150,7 +153,7 @@
                     android:text="Cancel" />
 
                 <Button
-                    android:id="@+id/Add_button_addlist_SubList"
+                    android:id="@+id/Add_button_addlist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="150dp"
@@ -160,6 +163,6 @@
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,44 +2,42 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinatorLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.TodlListFragment">
+    android:background="#2DE6F8FF"
+    tools:context=".view.list.TodlListFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#2DE6F8FF"
         android:clipToPadding="false"
         android:paddingBottom="100dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:text="To do List"
-                android:textColor="#000000"
+                android:textColor="#7B7B7B"
                 android:textSize="20sp" />
 
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="?android:attr/listDivider" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardview_"
         android:layout_width="match_parent"
-        android:layout_height="692dp"
+        android:layout_height="600dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#2DE6F8FF"
+        android:backgroundTint="#2DE6F8FF"
         android:padding="20dp"
         app:strokeColor="#E6F8FF"
         app:strokeWidth="5dp">
@@ -47,7 +45,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#2DE6F8FF"
             android:orientation="vertical"
             android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,12 +56,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycle_View_Sub"
+                android:id="@+id/recycle_View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#2DE6F8FF"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
@@ -71,7 +72,7 @@
         android:layout_gravity="bottom" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_SubList"
+        android:id="@+id/floating_List"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -79,6 +80,7 @@
         android:soundEffectsEnabled="true"
         android:src="@android:drawable/ic_input_add"
         app:layout_anchor="@+id/bottomAppBar"
-        app:layout_anchorGravity="top|center" />
+        app:layout_anchorGravity="top|center"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

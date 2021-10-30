@@ -1,4 +1,4 @@
-package com.example.todlprojectv1.view
+package com.example.todlprojectv1.view.SubList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/todlAddFragment"
-        android:name="com.example.todlprojectv1.view.TodlAddFragment"
+        android:name="com.example.todlprojectv1.view.list.TodlAddFragment"
         android:label="New Task"
         tools:layout="@layout/fragment_todl_add" />
     <fragment
@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/subListFragment"
-        android:name="com.example.todlprojectv1.view.SubListFragment"
+        android:name="com.example.todlprojectv1.view.SubList.SubListFragment"
         android:label="fragment_sub_list"
         tools:layout="@layout/fragment_sub_list" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/todlListFragment2"
-        android:name="com.example.todlprojectv1.view.TodlListFragment"
+        android:name="com.example.todlprojectv1.view.list.TodlListFragment"
         android:label="Home Page"
         tools:layout="@layout/fragment_todl_list">
         <action
