@@ -13,8 +13,8 @@
     <fragment
         android:id="@+id/subListFragment"
         android:name="com.example.todlprojectv1.view.SubList.SubListFragment"
-        android:label="fragment_sub_list"
-        tools:layout="@layout/fragment_sub_list" >
+        android:label="Sub Task"
+        tools:layout="@layout/fragment_sub_list">
         <action
             android:id="@+id/action_subListFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
