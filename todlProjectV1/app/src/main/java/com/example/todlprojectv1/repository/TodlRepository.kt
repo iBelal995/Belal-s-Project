@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.todlprojectv1.database.TodlDatabase
 import com.example.todlprojectv1.database.TodlModelList
+import com.example.todlprojectv1.database.TodlModelSubList
 import java.lang.Exception
 
 private const val DATABASE_NAME = "todl_database"
@@ -22,6 +23,9 @@ class TodlRepository(context:Context) {
     suspend fun addList(todlModelList:TodlModelList) = todlDao.addList(todlModelList)
     suspend fun updateList(todlModelList: TodlModelList) = todlDao.updateList(todlModelList)
     suspend fun deleteList(todlModelList: TodlModelList) = todlDao.deleteList(todlModelList)
+    suspend fun addList(todlModesublList:TodlModelSubList) = todlDao.addList(todlModesublList)
+    suspend fun updateList(todlModesublList: TodlModelSubList) = todlDao.updateList(todlModesublList)
+    suspend fun deleteList(todlModesublList: TodlModelSubList) = todlDao.deleteList(todlModesublList)
 
 
     /***

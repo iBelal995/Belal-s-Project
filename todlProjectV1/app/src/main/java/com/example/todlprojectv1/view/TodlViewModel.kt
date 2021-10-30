@@ -39,6 +39,23 @@ class TodlViewModel:ViewModel() {
             }
         }
 
+    fun addList(todlModelSubList:TodlModelSubList){
 
+        viewModelScope.launch {
+            todlRepository.addList(todlModelSubList)
+        }
+
+    }
+    fun updateList(todlModelSubList: TodlModelSubList) {
+        viewModelScope.launch {
+            todlRepository.updateList(todlModelSubList)
+        }
+    }
+
+    fun deleteList(todlModelSubList: TodlModelSubList){
+        viewModelScope.launch {
+            todlRepository.deleteList(todlModelSubList)
+        }
+    }
 
 }
