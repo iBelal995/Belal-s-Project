@@ -38,6 +38,7 @@
                 android:id="@+id/Tasktitle_edittext_add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="Task Title"
                 android:inputType="textPersonName"
@@ -123,7 +124,7 @@
                     android:layout_marginLeft="20dp"
                     android:gravity="bottom"
                     android:padding="10dp"
-                    android:text="Calendar:"
+                    android:text="Due Time:"
                     android:textSize="16sp" />
 
                 <Button
@@ -131,10 +132,9 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:background="@android:color/transparent"
-                    android:foreground="@android:drawable/ic_menu_my_calendar"
                     android:padding="8dp"
-                    android:src="@android:drawable/ic_menu_my_calendar"
+                    app:icon="@drawable/ic_baseline_calendar_today_24"
+                    app:iconTint="#0049FF"
                     tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
@@ -146,19 +146,23 @@
 
                 <Button
                     android:id="@+id/Cancle_button_addlist"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:backgroundTint="#E6F8FF"
                     android:gravity="center"
-                    android:text="Cancel" />
+                    android:text="Cancel"
+                    android:textColor="#0049FF" />
 
                 <Button
                     android:id="@+id/Add_button_addlist"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginLeft="130dp"
+                    android:backgroundTint="#E6F8FF"
                     android:gravity="center"
-                    android:text="Add" />
+                    android:text="Add"
+                    android:textColor="#0049FF" />
             </LinearLayout>
 
         </LinearLayout>
