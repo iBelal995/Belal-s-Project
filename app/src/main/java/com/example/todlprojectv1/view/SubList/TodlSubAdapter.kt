@@ -32,17 +32,22 @@ class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel:
 
     override fun onBindViewHolder(holder: TodelSubViewHolder, position: Int) {
         val lists = listsubTask[position]
-            holder.sub_task.text = lists.subTask.uppercase()
-            holder.subtaskprio.text =lists.prioritysub
-            when(lists.prioritysub){
-                "High"-> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9FFD2E2E"))
-                "Med"-> holder.subtaskprio.setBackgroundColor(Color.parseColor("#A1FFB74D"))
-                "Low" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9F6DFF4D"))
-            }
-            holder.subdelete.setOnClickListener {
-                todlViewModel.deletesubList(lists)
-            }
+        holder.sub_task.text = lists.subTask.uppercase()
+        holder.subtaskprio.text = lists.prioritysub
+        when (lists.prioritysub) {
+            "High" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9FFD2E2E"))
+            "Med" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#A1FFB74D"))
+            "Low" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9F6DFF4D"))
         }
+        holder.subdelete.setOnClickListener {
+            todlViewModel.deletesubList(lists)
+        }
+        holder.itemView.setOnClickListener{it ->
+            todlViewModel.selectedItemId = lists.subTaskId
+            it.findNavController().navigate(R.id.action_subListFragment_to_detailsFragment)
+        }
+    }
+
 
 
 

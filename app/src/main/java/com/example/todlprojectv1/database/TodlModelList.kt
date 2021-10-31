@@ -15,6 +15,7 @@ data class TodlModelList(
     @PrimaryKey(autoGenerate = true)
     val taskId: Int =0
     )
+
 @Entity
 data class TodlModelSubList(
     val subTask:String,
