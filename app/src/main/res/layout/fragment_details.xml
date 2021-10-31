@@ -38,6 +38,25 @@
             android:gravity="start|top"
             android:inputType="textMultiLine" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6F8FF"
+            android:backgroundTint="#E6F8FF"
+            android:text="Update"
+            android:textColor="#0049FF"
+            android:visibility="gone" />
 
+        <Button
+            android:id="@+id/Cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6F8FF"
+            android:backgroundTint="#E6F8FF"
+            android:text="Cancel"
+            android:textColor="#0049FF"
+            android:visibility="gone" />
+
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

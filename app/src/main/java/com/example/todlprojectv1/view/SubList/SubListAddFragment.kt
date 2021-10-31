@@ -46,9 +46,5 @@ class SubListAddFragment : BottomSheetDialogFragment() {
             cancleButton.setOnClickListener {
              dismiss()
          }
-
-
-
-
     }
 }

@@ -44,6 +44,7 @@ class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel:
         }
         holder.itemView.setOnClickListener{it ->
             todlViewModel.selectedItemId = lists.subTaskId
+            todlViewModel.selectedListSubMutableLiveData.postValue(lists)
             it.findNavController().navigate(R.id.action_subListFragment_to_detailsFragment)
         }
     }

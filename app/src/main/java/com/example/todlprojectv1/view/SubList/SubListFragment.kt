@@ -40,7 +40,8 @@ class SubListFragment : Fragment() {
             it?.let { list ->
                 todlsubList.clear()
                 todlsubList.addAll(list)
-                todlsubAdapter.notifyDataSetChanged() } })
+                todlsubAdapter.notifyDataSetChanged()
+            } })
         val fab: FloatingActionButton = view.findViewById(R.id.floating_subList)
         val addBottomSheet = SubListAddFragment()
         fab.setOnClickListener {

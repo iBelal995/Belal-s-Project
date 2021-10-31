@@ -20,7 +20,7 @@ data class TodlModelList(
 data class TodlModelSubList(
     val subTask:String,
     val prioritysub:String,
-    val description:String,
+    var description:String,
     val mainTaskId: Int,
     @PrimaryKey(autoGenerate = true)
     val subTaskId: Int = 0
