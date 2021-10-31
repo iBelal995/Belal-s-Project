@@ -39,35 +39,24 @@ class TodlAddFragment : BottomSheetDialogFragment() {
         val cancleButton: Button = view.findViewById(R.id.Cancle_button_addlist)
         val calnder:Button = view.findViewById(R.id.Calendar_button_add)
         val creationDate = Calendar.getInstance().timeInMillis
-        val calnderinstance = Calendar.getInstance()
-        var due: Long? = null
+        val datePicker = DatePickerDialog(requireActivity())
+        var due: String =""
 
         addButton.setOnClickListener {
             val task = taskTitle.text.toString()
             var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
             var prio = priorityRadioButton.text.toString()
-                todlViewModel.addList(TodlModelList(task,prio,due,creationDate,false))
+                todlViewModel.addList(TodlModelList(task,prio, calnder.text.toString(),creationDate,false))
                 dismiss()
         }
             cancleButton.setOnClickListener {
                 dismiss()
             }
-        val dateSetListener =
-            DatePickerDialog.OnDateSetListener { view, _, _, _ ->
-                calnderinstance.set(Calendar.YEAR,0)
-                calnderinstance.set(Calendar.MONTH,0)
-                calnderinstance.set(Calendar.DAY_OF_MONTH,0)
-                due = calnderinstance.timeInMillis
-            }
-
+      datePicker.setOnDateSetListener { view, year, month, dayOfMonth ->
+          calnder.setText("${year}/${month+1}/$dayOfMonth")
+      }
         calnder.setOnClickListener {
-            DatePickerDialog(
-                requireActivity(),
-                dateSetListener,
-                calnderinstance.get(Calendar.YEAR),
-                calnderinstance.get(Calendar.MONTH),
-                calnderinstance.get(Calendar.DAY_OF_MONTH)
-            ).show()
+            datePicker.show()
         }
     }
 }

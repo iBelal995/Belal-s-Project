@@ -28,7 +28,7 @@
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
-            android:gravity="center"
+            android:gravity="top"
             android:textColor="#000000" />
 
         <Button

@@ -9,7 +9,7 @@ import androidx.room.Relation
 data class TodlModelList(
     val taskTitle:String,
     val priority: String,
-    var dueDate: Long?,
+    var dueDate: String,
     var creationDate: Long,
     var completed: Boolean,
     @PrimaryKey(autoGenerate = true)
