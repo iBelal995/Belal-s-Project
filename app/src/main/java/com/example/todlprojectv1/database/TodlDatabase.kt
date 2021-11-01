@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
-@Database(entities = [TodlModelList::class,TodlModelSubList::class],version = 16)
+@Database(entities = [TodlModelList::class,TodlModelSubList::class],version = 19)
 
 
 abstract class TodlDatabase:RoomDatabase() {

@@ -11,7 +11,7 @@ data class TodlModelList(
     val priority: String,
     var dueDate: String,
     var creationDate: Long,
-    var completed: Boolean,
+    var completed: Boolean ,
     @PrimaryKey(autoGenerate = true)
     val taskId: Int =0
     )
@@ -33,3 +33,4 @@ data class MainTaskWithSubTask(
     )
     val subTask: List<TodlModelSubList>
 )
+public class Employee

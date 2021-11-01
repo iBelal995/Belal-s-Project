@@ -7,11 +7,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.core.view.isNotEmpty
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todlprojectv1.R
@@ -40,14 +38,19 @@ class TodlAddFragment : BottomSheetDialogFragment() {
         val calnder:Button = view.findViewById(R.id.Calendar_button_add)
         val creationDate = Calendar.getInstance().timeInMillis
         val datePicker = DatePickerDialog(requireActivity())
-        var due: String =""
+
 
         addButton.setOnClickListener {
             val task = taskTitle.text.toString()
             var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
             var prio = priorityRadioButton.text.toString()
+            val dueDate = calnder.text.toString()
+
+            if (dueDate.isNotEmpty()) {
                 todlViewModel.addList(TodlModelList(task,prio, calnder.text.toString(),creationDate,false))
                 dismiss()
+            } else
+                Toast.makeText(requireActivity(), "Please add a due date in the Calendar", Toast.LENGTH_SHORT).show()
         }
             cancleButton.setOnClickListener {
                 dismiss()

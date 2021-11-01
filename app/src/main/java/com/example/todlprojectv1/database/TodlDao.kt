@@ -2,6 +2,10 @@ package com.example.todlprojectv1.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import androidx.room.Delete
+
+
+
 
 @Dao
 interface TodlDao {
@@ -22,9 +26,11 @@ interface TodlDao {
     @Update
     suspend fun updatesubList(todlModesublList: TodlModelSubList)
 
-
     @Delete
-    suspend fun deleteList(todlModelList: TodlModelList)
+    suspend fun deleteList(todlModelList: TodlModelList )
     @Delete
     suspend fun deletesubList(todlModesublList: TodlModelSubList)
+
+
+
 }
