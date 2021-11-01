@@ -2,24 +2,26 @@ package com.example.todlprojectv1.view.list
 
 import android.graphics.Color
 import android.graphics.Paint
+import android.inputmethodservice.ExtractEditText
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.view.menu.MenuView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todlprojectv1.R
 import com.example.todlprojectv1.database.MainTaskWithSubTask
+import com.example.todlprojectv1.database.TodlModelList
 import com.example.todlprojectv1.view.TodlViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
+
     class TodelViewHolder(view:View):RecyclerView.ViewHolder(view){
         val taskTitlea:TextView = view.findViewById(R.id.List_TextView)
         val taskPrioritya:TextView= view.findViewById(R.id.List__prio_TextView)
@@ -27,7 +29,7 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         val creationdate:TextView = view.findViewById(R.id.creationdate)
         val duedateshow:TextView =view.findViewById(R.id.textView4)
         val Completed:CheckBox = view.findViewById(R.id.checkBox)
-
+        val edit:Button = view.findViewById(R.id.edit_button)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodelViewHolder {
@@ -44,13 +46,17 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
 
 
         val list = listTask[position].task
+
         val creationDate = list.creationDate
         holder.duedateshow.text = list.dueDate
         holder.creationdate.text = SimpleDateFormat("yyyy/MM/d").format(creationDate)
         holder.taskTitlea.text = list.taskTitle.toUpperCase()
         holder.taskPrioritya.text = list.priority
         holder.Completed.isChecked = list.completed
-
+        holder.edit.setOnClickListener {
+            holder.taskTitlea.setText(TextView(holder.itemView.context).editableText)
+            todlViewModel.updateList(list)
+        }
 
 
         val currentDate = Date()
@@ -118,3 +124,4 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         return listTask.size
     }
 }
+

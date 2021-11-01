@@ -17,7 +17,6 @@ import com.example.todlprojectv1.view.TodlViewModel
 
 
 class DetailsFragment : Fragment() {
-    private val todlsubList = mutableListOf<TodlModelSubList>()
     private val todlViewModel: TodlViewModel by activityViewModels()
     private lateinit var selectedItem: TodlModelSubList
     override fun onCreateView(
