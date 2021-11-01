@@ -35,9 +35,9 @@ class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel:
         holder.sub_task.text = lists.subTask.uppercase()
         holder.subtaskprio.text = lists.prioritysub
         when (lists.prioritysub) {
-            "High" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9FFD2E2E"))
-            "Med" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#A1FFB74D"))
-            "Low" -> holder.subtaskprio.setBackgroundColor(Color.parseColor("#9F6DFF4D"))
+            "High" -> holder.subtaskprio.setTextColor(Color.parseColor("#9FFD2E2E"))
+            "Med" -> holder.subtaskprio.setTextColor(Color.parseColor("#A1FFB74D"))
+            "Low" -> holder.subtaskprio.setTextColor(Color.parseColor("#9F6DFF4D"))
         }
         holder.subdelete.setOnClickListener {
             todlViewModel.deletesubList(lists)
