@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Sub Task Title"
+                android:hint="Enter Sub Task Title"
                 android:inputType="textPersonName"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -63,6 +63,7 @@
                         android:gravity="bottom"
                         android:padding="10dp"
                         android:text="Priority:"
+                        android:textColor="#000000"
                         android:textSize="16sp" />
 
                     <RadioGroup

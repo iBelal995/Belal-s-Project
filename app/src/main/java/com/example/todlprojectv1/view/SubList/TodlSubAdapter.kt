@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -40,8 +41,23 @@ class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel:
             "Low" -> holder.subtaskprio.setTextColor(Color.parseColor("#9F6DFF4D"))
         }
         holder.subdelete.setOnClickListener {
-            todlViewModel.deletesubList(lists)
+            val alertDialog = AlertDialog
+                .Builder(holder.itemView.context)
+                .setTitle("Delete Sub Task")
+                .setMessage("Are you sure you want to delete the Sub task?")
+
+            alertDialog.setPositiveButton("Yes") { _, _ ->
+                todlViewModel.deletesubList(lists)
+            }
+
+            alertDialog.setNegativeButton("No") { dialog, _ ->
+                dialog.cancel()
+            }
+
+            alertDialog.create().show()
+
         }
+
         holder.itemView.setOnClickListener{it ->
             todlViewModel.selectedItemId = lists.subTaskId
             todlViewModel.selectedListSubMutableLiveData.postValue(lists)

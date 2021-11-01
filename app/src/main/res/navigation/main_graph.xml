@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.todlprojectv1.view.SubList.DetailsFragment"
-        android:label="fragment_details"
+        android:label="Details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/subListFragment"

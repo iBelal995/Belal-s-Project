@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -60,6 +61,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         }
         else if (list.completed){
             holder.taskTitlea.setBackgroundColor(Color.parseColor("#9EFF00"))//اخضر
+
+
         }
         else{
             holder.taskTitlea.setBackgroundColor(Color.parseColor("#6800B8FF"))//ازرق
@@ -67,6 +70,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         holder.Completed.setOnClickListener(){
             if(holder.Completed.isChecked){
                 holder.taskTitlea.setBackgroundColor(Color.parseColor("#9EFF00"))//اخضر
+                Toast.makeText(holder.itemView.context, "Completed", Toast.LENGTH_SHORT).show()
+
             }
             else{
                 holder.taskTitlea.setBackgroundColor(Color.parseColor("#6800B8FF"))//ازرق

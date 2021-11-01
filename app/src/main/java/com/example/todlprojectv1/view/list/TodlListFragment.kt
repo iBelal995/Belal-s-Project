@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isEmpty
+import androidx.core.view.isNotEmpty
 import androidx.fragment.app.*
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -22,6 +25,7 @@ class TodlListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_todl_list, container, false)
     }
 
@@ -38,7 +42,24 @@ class TodlListFragment : Fragment() {
                 todelList.addAll(list)
 
                 todlAdapter.notifyDataSetChanged()
-            } })
+            }
+        })
+//        if (todelList.isEmpty()) {
+//            val alertDialog = AlertDialog
+//                .Builder(view.context)
+//                .setTitle("Welcome to TODL")
+//                .setMessage("Start adding your tasks by click the + button below")
+//
+//
+//            alertDialog.setNegativeButton("YES") { dialog, _ ->
+//                dialog.dismiss()
+//            }
+//
+//            alertDialog.create().show()
+//        }
+
+
+
         val fab: FloatingActionButton = view.findViewById(R.id.floating_List)
         val addBottomSheet = TodlAddFragment()
         fab.setOnClickListener {
