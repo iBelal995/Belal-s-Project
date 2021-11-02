@@ -58,7 +58,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         holder.Completed.isChecked = list.completed
         holder.edit.setOnClickListener {
             val BottomSheet = EditFragment()
-                todlViewModel.selectedListMutableLiveData.postValue(list)
+
+            todlViewModel.selectedListMutableLiveData.postValue(list)
             BottomSheet.show(manger,"")
 
         }
@@ -108,11 +109,11 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         }
         holder.delete.setOnClickListener {
             val alertDialog = AlertDialog
-                .Builder(holder.itemView.context)
+                .Builder(holder.itemView.context,R.style.AlertDialogTheme)
                 .setTitle("Delete Task")
                 .setMessage("Are you sure you want to delete the task?")
-
             alertDialog.setPositiveButton("Yes") { _, _ ->
+
                 todlViewModel.deleteList(list)
             }
 
