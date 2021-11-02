@@ -125,19 +125,35 @@
                     android:layout_marginLeft="20dp"
                     android:gravity="bottom"
                     android:padding="10dp"
-                    android:text="Due Time:"
+                    android:text="Due date:"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/Calendar_button_add"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="5dp"
                     android:padding="8dp"
                     app:icon="@drawable/ic_baseline_calendar_today_24"
                     app:iconTint="#0049FF"
                     tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Due date OFF"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/duedateoff"
+                    android:layout_width="37dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:textAlignment="textStart" />
 
             </LinearLayout>
 

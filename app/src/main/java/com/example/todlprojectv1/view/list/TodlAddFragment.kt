@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.core.view.isGone
 import androidx.core.view.isNotEmpty
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -39,14 +40,17 @@ class TodlAddFragment : BottomSheetDialogFragment() {
         val calnder:Button = view.findViewById(R.id.Calendar_button_add)
         val creationDate = Calendar.getInstance().timeInMillis
         val datePicker = DatePickerDialog(requireActivity())
-
+        val duedateoff:CheckBox = view.findViewById(R.id.duedateoff)
 
         addButton.setOnClickListener {
             val task = taskTitle.text.toString()
             var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
             var prio = priorityRadioButton.text.toString()
             val dueDate = calnder.text.toString()
+            if (duedateoff.isChecked){
 
+
+            }
             if (dueDate.isNotEmpty()) {
                 todlViewModel.addList(TodlModelList(task,prio, calnder.text.toString(),creationDate,false))
                 dismiss()
