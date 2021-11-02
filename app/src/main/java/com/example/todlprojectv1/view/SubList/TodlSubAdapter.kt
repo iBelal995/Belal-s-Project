@@ -42,7 +42,7 @@ class TodlSubAdapter(val listsubTask: List<TodlModelSubList>, val todlViewModel:
         }
         holder.subdelete.setOnClickListener {
             val alertDialog = AlertDialog
-                .Builder(holder.itemView.context)
+                .Builder(holder.itemView.context,R.style.AlertDialogTheme)
                 .setTitle("Delete Sub Task")
                 .setMessage("Are you sure you want to delete the Sub task?")
 

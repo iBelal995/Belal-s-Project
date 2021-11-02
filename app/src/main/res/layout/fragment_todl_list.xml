@@ -96,6 +96,15 @@
                 android:text="Overdue"
                 android:textSize="10sp" />
 
+            <Button
+                android:id="@+id/sortby"
+                android:layout_width="95dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="Sort by Title"
+                android:textColor="#131313"
+                android:textSize="6sp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -115,6 +124,7 @@
                 android:id="@+id/recycle_View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:background="#2DE6F8FF"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </LinearLayout>

@@ -33,6 +33,7 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         val duedateshow:TextView =view.findViewById(R.id.textView4)
         val Completed:CheckBox = view.findViewById(R.id.checkBox)
         val edit:Button = view.findViewById(R.id.edit_button)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodelViewHolder {

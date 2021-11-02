@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isEmpty
 import androidx.core.view.isNotEmpty
@@ -44,20 +45,14 @@ class TodlListFragment : Fragment() {
                 todlAdapter.notifyDataSetChanged()
             }
         })
-//        if (todelList.isEmpty()) {
-//            val alertDialog = AlertDialog
-//                .Builder(view.context)
-//                .setTitle("Welcome to TODL")
-//                .setMessage("Start adding your tasks by click the + button below")
-//
-//
-//            alertDialog.setNegativeButton("YES") { dialog, _ ->
-//                dialog.dismiss()
-//            }
-//
-//            alertDialog.create().show()
-//        }
+        val sortby: Button = view.findViewById(R.id.sortby)
+        sortby.setOnClickListener {
+            todelList.sortBy {
+                it.task.taskTitle
+            }
+            todlAdapter.notifyDataSetChanged()
 
+        }
 
 
         val fab: FloatingActionButton = view.findViewById(R.id.floating_List)
