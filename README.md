@@ -24,7 +24,6 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 * [ViewModel][7] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
      asynchronous tasks for optimal execution.
 * [UI][9] - Details on why and how to use UI Components in your apps - together or separate
-  * [Animations & Transitions][10] - Move widgets and transition between screens.
   * [Fragment][11] - A basic unit of composable UI.
   * [Layout][12] - Lay out widgets using different algorithms.
 * Third party and miscellaneous libraries
@@ -43,7 +42,6 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 [7]: https://developer.android.com/topic/libraries/architecture/viewmodel
 [8]: https://developer.android.com/topic/libraries/architecture/workmanager
 [9]: https://developer.android.com/guide/topics/ui
-[10]: https://developer.android.com/training/animation/
 [11]: https://developer.android.com/guide/components/fragments
 [12]: https://developer.android.com/guide/topics/ui/declaring-layout
 [14]: https://bumptech.github.io/glide/
