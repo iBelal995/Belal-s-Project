@@ -33,7 +33,7 @@ class TodlListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val todelRecycleView: RecyclerView = view.findViewById(R.id.recycle_View)
-        val todlAdapter = TodlAdapter(todelList, todlViewModel)
+        val todlAdapter = TodlAdapter(todelList, todlViewModel,requireActivity().supportFragmentManager)
 
         todelRecycleView.adapter = todlAdapter
         todlViewModel.todlList.observe(viewLifecycleOwner, Observer {

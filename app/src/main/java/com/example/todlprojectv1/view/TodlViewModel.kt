@@ -18,7 +18,7 @@ class TodlViewModel:ViewModel() {
     var selectedItemId = 0
 
 
-    //var selectedListMutableLiveData = MutableLiveData<List<TodlModelSubList>>()//نقل الداتا من تو دو لست الى السب لست
+    var selectedListMutableLiveData = MutableLiveData<TodlModelList>()//نقل الداتا من تو دو لست الى السب لست
     var selectedListSubMutableLiveData = MutableLiveData<TodlModelSubList>()//من السب لست الى الديتيلز
 
 

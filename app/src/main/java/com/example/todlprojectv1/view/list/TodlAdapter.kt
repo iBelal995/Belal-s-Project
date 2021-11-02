@@ -3,6 +3,7 @@ package com.example.todlprojectv1.view.list
 import android.graphics.Color
 import android.graphics.Paint
 import android.inputmethodservice.ExtractEditText
+import android.media.MediaPlayer
 import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.view.menu.MenuView
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todlprojectv1.R
@@ -18,9 +20,10 @@ import com.example.todlprojectv1.database.TodlModelList
 import com.example.todlprojectv1.view.TodlViewModel
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.coroutines.coroutineContext
 
 
-class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
+class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel,val manger:FragmentManager): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
 
     class TodelViewHolder(view:View):RecyclerView.ViewHolder(view){
         val taskTitlea:TextView = view.findViewById(R.id.List_TextView)
@@ -54,9 +57,12 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         holder.taskPrioritya.text = list.priority
         holder.Completed.isChecked = list.completed
         holder.edit.setOnClickListener {
-            holder.taskTitlea.setText(TextView(holder.itemView.context).editableText)
-            todlViewModel.updateList(list)
+            val BottomSheet = EditFragment()
+                todlViewModel.selectedListMutableLiveData.postValue(list)
+            BottomSheet.show(manger,"")
+
         }
+
 
 
         val currentDate = Date()

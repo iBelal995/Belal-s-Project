@@ -4,11 +4,11 @@ import androidx.room.*
 
 @Entity
 data class TodlModelList(
-    val taskTitle:String,
+    var taskTitle:String,
     val priority: String,
     var dueDate: String,
     var creationDate: Long,
-    var completed: Boolean ,
+    var completed: Boolean,
     @PrimaryKey(autoGenerate = true)
     val taskId: Int =0)
     @Entity(
