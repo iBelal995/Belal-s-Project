@@ -1,6 +1,6 @@
 # TODL-Project
 ### Description : 
-It's a well-organized To Do List application on the Android Studio that helps you manage your daily chores and lets you make changes simply, such as adding, editing, and removing tasks, among other things!
+It's a well-organized To Do List application on the Android Studio that helps you manage your daily tasks and lets you make changes simply, such as adding, editing, and removing tasks, among other things!
 
 ### ![Mask Group (1)](https://user-images.githubusercontent.com/91452283/139941414-6e3c6689-e7e5-4af3-a6ed-8d4ab972ad90.png)
 
