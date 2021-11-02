@@ -49,21 +49,39 @@ It's a To Do List application on the Android Studio, it help to orgnize your dai
 
 
 
-## Screenshots
+## Screenshots Android Studio
 
-Add ToDo | Check Done | Edit Task | Delete Task
---- | --- | --- | ---
-<img align="center" src="./91452283/139949155-9df8dc6e-924e-44b8-ac65-e5fc3e5be209.png" width="240"> | <img align="center" src="./resources/tasks_doing_done.gif" width="240"> | <img align="center" src="./resources/edit_task.gif" width="240"> | <img align="center" src="./resources/delete_task.gif" width="240">
+ Add ToDo | 
+ --- | 
+![add](https://user-images.githubusercontent.com/91452283/139950312-bc88c6d8-fba4-47da-aa41-2e88903cc395.jpg)
+ Edit title ToDo |
+  ![image](https://user-images.githubusercontent.com/91452283/139950469-15edd630-9949-4209-86c2-b2dbb588e2e8.png)
+ Edit task description ToDo |
+ ![image](https://user-images.githubusercontent.com/91452283/139950831-85a0cb6d-7130-41cc-b3c1-e8f07208e933.png)
+ Delete ToDo |
+ ![image](https://user-images.githubusercontent.com/91452283/139951626-b777717b-6f28-4ed0-b72c-1885779ad218.png)
+ Check ToDo |
+ ![image](https://user-images.githubusercontent.com/91452283/139951690-7ac32332-8160-40ce-b8bb-41bbd208e0c9.png)
+## Screenshots Figma
+![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
+
+## Favoraite Features 
+- Adding tasks - you can add task 
+- Creation date - by creating a task the app automatlicly will post the creation date within the task
+- Deleting tasks - you can delete any task you want whether main task or sub task
+- Editing tasks - you can edit the task title and the description by update function
+- Neasted tasks - you can add sub task wthin the main task
+- Due date - for each task available you can add the due date (deadline) to do the task wthin a specfic time 
+- complete check - you can check box any task you added whether it's overdue or not
+- indicators of the status - there is an indicators for each task added of three indicators : in progress, completed, overdue
+- priority - by creating a task you can specify the priority of the task by three indicators : High, Med, Low
+- Sort by alphabet A-Z - By click of button you can sort the task by order within the alphabet A-Z
 
 
-<p align="center">
-<img align="center" src="./screenshots/tasks.png" width="240"> 
-<img align="center" src="./screenshots/tasks_dark.png" width="240">
-</p>
 
-
-
-
-Upcoming features
-
+##Upcoming features
+- Firebase
+- Enable filtering
+- Enforce due dates notifcation
+- Geofencing
 
