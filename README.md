@@ -21,6 +21,8 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 * [LiveData][4] - Build data objects that notify views when the underlying database changes.
 * [Navigation][5] - Handle everything needed for in-app navigation.
 * [Room Database][6] - Access your app's SQLite database with in-app objects and compile-time checks.
+* [ForeignKey][20] - Is used to enforce relational structure when INSERTING / MODYFING your data
+* [one-to-many relationships][21] - A one-to-many relationship between two entities is a relationship where each instance of the parent entity corresponds to zero or more instances of the child entity, but each instance of the child entity can only correspond to exactly one instance of the parent entity
 * [ViewModel][7] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
      asynchronous tasks for optimal execution.
 * [UI][9] - Details on why and how to use UI Components in your apps - together or separate
@@ -30,8 +32,8 @@ It's a well-organized To Do List application on the Android Studio that helps yo
   * [Glide][14] - for image loading
   
   
-
-
+[21]: https://developer.android.com/training/data-storage/room/relationships
+[20]: https://developer.android.com/reference/androidx/room/ForeignKey
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/jetpack/arch/
 [2]: https://developer.android.com/topic/libraries/data-binding/
