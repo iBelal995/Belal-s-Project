@@ -67,16 +67,16 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 ![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
 
 ### Favoraite Features 
-- Adding tasks - you can add many tasks 
-- Creation date - by creating a task the app automatlicly will post the creation date within the task
-- Deleting tasks - you can delete any task you want whether main task or sub task
-- Editing tasks - you can edit the task title and the description by update function
-- Neasted tasks - you can add sub tasks within the main task
-- Due date - for each task available you can add the due date (deadline) to do the task within a specfic time 
+- Adding tasks - You can add as many tasks as you want.
+- Creation date - When you create a task, the app will automatically post the date when it was created.
+- Task deletion - You can delete any task, whether it's a primary task or a subtask.
+- Editing tasks - Using the update feature, you may change the task title and description.
+- Neasted tasks - Within the primary task, you can add subtasks.
+- Due date - For each task available, you may add a due date (deadline) to ensure that the task is completed within a certain amount of time. 
 - complete check - you can check box any task you added whether it's overdue or not
 - indicators of the status - there is an indicators for each task added of three indicators : in progress, completed, overdue
-- priority - by creating a task you can specify the priority of the task by three indicators : High, Med, Low
-- Sort by alphabet A-Z - By click of button you can sort the task by order within the alphabet A-Z
+- priority - When you create a task, you can set the task's priority using three indicators: High, Medium, and Low
+- Sort by alphabet A-Z - With a press of a button, you may sort the tasks by letter A-Z order.
 
 
 
