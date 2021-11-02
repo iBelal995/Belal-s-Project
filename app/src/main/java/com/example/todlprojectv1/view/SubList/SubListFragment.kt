@@ -44,12 +44,12 @@ class SubListFragment : Fragment() {
         val todlsubAdapter = TodlSubAdapter(todlsubList, todlViewModel)
         val textView:TextView = view.findViewById(R.id.textviewsub)
 
-//         textView.text= todlViewModel.selectedListMutableLiveData.observe(viewLifecycleOwner,
-//             Observer {it?.let { textView.setText(todlModlList.taskTitle)
-//                 todlViewModel.selectedItemId = todlModlList.taskId
-//                 todlModlList = it
-//
-//             }}).toString()
+         textView.text= todlViewModel.selectedListMutableLiveData.observe(viewLifecycleOwner,
+             Observer {it?.let { textView.setText(todlModlList.taskTitle)
+                 todlViewModel.selectedItemId = todlModlList.taskId
+                 todlModlList = it
+
+             }}).toString()
 
 
         todelsubRecycleView.adapter = todlsubAdapter

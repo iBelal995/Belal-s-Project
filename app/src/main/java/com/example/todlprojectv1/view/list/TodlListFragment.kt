@@ -16,7 +16,12 @@ import com.example.todlprojectv1.R
 import com.example.todlprojectv1.database.MainTaskWithSubTask
 import com.example.todlprojectv1.view.TodlViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-
+/***
+ * A Fragment represents a reusable portion of your app's UI.
+ * A fragment defines and manages its own layout, has its own lifecycle, and can handle its own input events.
+ * Fragments cannot live on their own--they must be hosted by an activity or another fragment.
+ * The fragment’s view hierarchy becomes part of, or attaches to, the host’s view hierarchy.
+ * */
 class TodlListFragment : Fragment() {
     private val todelList = mutableListOf<MainTaskWithSubTask>()
     private val todlViewModel: TodlViewModel by activityViewModels()
@@ -34,7 +39,22 @@ class TodlListFragment : Fragment() {
 
         val todelRecycleView: RecyclerView = view.findViewById(R.id.recycle_View)
         val todlAdapter = TodlAdapter(todelList, todlViewModel,requireActivity().supportFragmentManager)
+        /***
+         * When your app displays data or uses data in other ways,
+         * you usually want to take action when the data changes.
+         * This means you have to observe the data so that when it changes,
+         * you can react. Depending on how the data is stored,
+         * And now you can use LiveData for do that
+         * */
 
+        /*** Benefits of using LiveData
+         * Ensures that your UI matches your data state
+         * No memory leaks
+         * No crashes due to stopped activities
+         * Data is always up to date
+         * Configuration changes handled properly
+         * Resources can be shared
+         * */
         todelRecycleView.adapter = todlAdapter
         todlViewModel.todlList.observe(viewLifecycleOwner, Observer {
             it?.let { list ->

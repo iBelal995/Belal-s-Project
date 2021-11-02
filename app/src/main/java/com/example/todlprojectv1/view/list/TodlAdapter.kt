@@ -21,7 +21,17 @@ import com.example.todlprojectv1.view.TodlViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.coroutines.coroutineContext
-
+/***
+after layout finished.
+These two classes work together to define how your data is displayed.
+The ViewHolder is a wrapper around a View that contains the layout for an individual item in the list.
+The Adapter creates ViewHolder objects as needed, and also sets the data for those views.
+The process of associating views to their data is called binding.
+When you define your adapter, you need to override three key methods:
+onCreateViewHolder()
+onBindViewHolder()
+getItemCount()
+ **/
 
 class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel, val manger:FragmentManager): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
 
@@ -35,7 +45,11 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         val edit:Button = view.findViewById(R.id.edit_button)
 
     }
-
+    /**
+     * onCreateViewHolder(): RecyclerView calls this method whenever it needs to create a new ViewHolder.
+    The method creates and initializes the ViewHolder and its associated View,
+    but does not fill in the view's contents—the ViewHolder has not yet been bound to specific data.
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodelViewHolder {
         return TodelViewHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -45,7 +59,12 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
             )
         )
     }
-
+    /**
+     * onBindViewHolder(): RecyclerView calls this method to associate a ViewHolder with data.
+    The method fetches the appropriate data and uses the data to fill in the view holder's layout.
+    For example, if the RecyclerView displays a list of names,
+    the method might find the appropriate name in the list and fill in the view holder's TextView widget.
+     */
     override fun onBindViewHolder(holder: TodelViewHolder, position: Int) {
 
 
@@ -127,7 +146,11 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         }
 
     }
-
+    /**
+     * getItemCount(): RecyclerView calls this method to get the size of the data set.
+    For example, in an address book app, this might be the total number of addresses.
+    RecyclerView uses this to determine when there are no more items that can be displayed.
+     */
     override fun getItemCount(): Int {
         return listTask.size
     }

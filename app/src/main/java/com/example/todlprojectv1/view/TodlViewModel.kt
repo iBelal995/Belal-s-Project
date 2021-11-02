@@ -8,7 +8,16 @@ import androidx.lifecycle.viewModelScope
 import com.example.todlprojectv1.database.MainTaskWithSubTask
 import com.example.todlprojectv1.database.TodlModelSubList
 import kotlinx.coroutines.launch
-
+/**
+ * The ViewModel is a class whose role is to provide data to the UI and survive configuration changes.
+ * A ViewModel acts as a communication center between the Repository and the UI.
+ * You can also use a ViewModel to share data between fragments.
+ *
+ * A ViewModel holds your app's UI data in a lifecycle-conscious way that survives configuration changes.
+ * Separating your app's UI data from your Activity and Fragment classes lets you better follow the single responsibility principle:
+ * Your activities and fragments are responsible for drawing data to the screen,
+ * while your ViewModel is responsible for holding and processing all the data needed for the UI.
+ * */
 class TodlViewModel:ViewModel() {
     // Getting instance from inventory repository with companion object function
     private val todlRepository = TodlRepository.get()

@@ -11,7 +11,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
+/**
+ * this activity just to make an splash screen while the application first started*/
 class SplashScreenActivity : AppCompatActivity() {
 
             lateinit var handler: Handler
