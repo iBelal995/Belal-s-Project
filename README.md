@@ -1,5 +1,6 @@
 # TODL-Project
-It's a To Do List application on the Android Studio, it help to orgnize your daily tasks and let you modify changes easily such as adding, editing, and deleting tasks.
+### Description : 
+It's a well orgnized for user experiance a To Do List application on the Android Studio, it help to mange your daily tasks and let you modify changes easily such as adding, editing, and deleting task and much more Features applied! 
 
 ### ![Mask Group (1)](https://user-images.githubusercontent.com/91452283/139941414-6e3c6689-e7e5-4af3-a6ed-8d4ab972ad90.png)
 
@@ -49,7 +50,7 @@ It's a To Do List application on the Android Studio, it help to orgnize your dai
 
 
 
-## Screenshots Android Studio
+### Screenshots Android Studio
 
  Add ToDo | 
  --- | 
@@ -62,16 +63,16 @@ It's a To Do List application on the Android Studio, it help to orgnize your dai
  ![image](https://user-images.githubusercontent.com/91452283/139951626-b777717b-6f28-4ed0-b72c-1885779ad218.png)
  Check ToDo |
  ![image](https://user-images.githubusercontent.com/91452283/139951690-7ac32332-8160-40ce-b8bb-41bbd208e0c9.png)
-## Screenshots Figma
+### Screenshots Figma
 ![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
 
-## Favoraite Features 
-- Adding tasks - you can add task 
+### Favoraite Features 
+- Adding tasks - you can add many tasks 
 - Creation date - by creating a task the app automatlicly will post the creation date within the task
 - Deleting tasks - you can delete any task you want whether main task or sub task
 - Editing tasks - you can edit the task title and the description by update function
-- Neasted tasks - you can add sub task wthin the main task
-- Due date - for each task available you can add the due date (deadline) to do the task wthin a specfic time 
+- Neasted tasks - you can add sub tasks within the main task
+- Due date - for each task available you can add the due date (deadline) to do the task within a specfic time 
 - complete check - you can check box any task you added whether it's overdue or not
 - indicators of the status - there is an indicators for each task added of three indicators : in progress, completed, overdue
 - priority - by creating a task you can specify the priority of the task by three indicators : High, Med, Low
@@ -79,7 +80,7 @@ It's a To Do List application on the Android Studio, it help to orgnize your dai
 
 
 
-##Upcoming features
+### Upcoming features
 - Firebase
 - Enable filtering
 - Enforce due dates notifcation
