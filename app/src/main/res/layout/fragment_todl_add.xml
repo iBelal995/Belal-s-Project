@@ -32,7 +32,8 @@
                 android:layout_marginLeft="10dp"
                 android:text="Add your Task"
                 android:textColor="#7B7B7B"
-                android:textSize="34sp" />
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/Tasktitle_edittext_add"

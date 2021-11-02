@@ -21,14 +21,9 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:textSize="20sp" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
+            android:text="Description:"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <ScrollView
             android:layout_width="match_parent"

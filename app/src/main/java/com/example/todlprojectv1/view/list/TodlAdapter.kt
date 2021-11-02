@@ -23,7 +23,7 @@ import java.util.*
 import kotlin.coroutines.coroutineContext
 
 
-class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel,val manger:FragmentManager): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
+class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: TodlViewModel, val manger:FragmentManager): RecyclerView.Adapter<TodlAdapter.TodelViewHolder>() {
 
     class TodelViewHolder(view:View):RecyclerView.ViewHolder(view){
         val taskTitlea:TextView = view.findViewById(R.id.List_TextView)
@@ -111,8 +111,8 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         holder.delete.setOnClickListener {
             val alertDialog = AlertDialog
                 .Builder(holder.itemView.context,R.style.AlertDialogTheme)
-                .setTitle("Delete Task")
-                .setMessage("Are you sure you want to delete the task?")
+                .setTitle("Delete ${list.taskTitle.uppercase()}")
+                .setMessage("Are you sure you want to delete the ${list.taskTitle.uppercase()} list?")
             alertDialog.setPositiveButton("Yes") { _, _ ->
 
                 todlViewModel.deleteList(list)
