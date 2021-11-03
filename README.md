@@ -30,8 +30,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 * [UI][9] - Details on why and how to use UI Components in your apps - together or separate
   * [Fragment][11] - A basic unit of composable UI.
   * [Layout][12] - Lay out widgets using different algorithms.
-* Third party and miscellaneous libraries
-  * [Glide][14] - for image loading
+
   
   
 [21]: https://developer.android.com/training/data-storage/room/relationships
@@ -48,7 +47,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 [9]: https://developer.android.com/guide/topics/ui
 [11]: https://developer.android.com/guide/components/fragments
 [12]: https://developer.android.com/guide/topics/ui/declaring-layout
-[14]: https://bumptech.github.io/glide/
+
 
 ## User stories
 - As a TODO LIST app, I'd like to add tasks to the list so that the user may better plan his time and save the tasks he want to complete.
