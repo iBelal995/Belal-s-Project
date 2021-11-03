@@ -74,10 +74,10 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 ### Software development lifecycle
 ![image](https://user-images.githubusercontent.com/91452283/140063117-e6dfcae8-dc42-4300-89cd-cd760809c347.png)
 - Planning :Time mangment, Brain Storming.
-- Analysis : the requirements , what i need , what i am going to do , what if 
+- Analysis :The requirements , what i need , what i am going to do , what if 
 - Design : [Figma](https://www.figma.com/file/kw8AehQEs461F6tmATOSaT/belal-project?node-id=0%3A1)
 - Implementaation : Andriod Studio
-- Testing : Start the app 
+- Testing : Test the actions and the features
 - Maintanance : fixing any problems accure
 ### Screenshots Figma
 ![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
