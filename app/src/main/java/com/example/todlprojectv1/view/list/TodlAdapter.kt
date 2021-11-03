@@ -85,21 +85,28 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
         }
 
 
+        if (list.dueDate.isNotEmpty()) {
 
-        val currentDate = Date()
-        val formata = SimpleDateFormat("yyyy/MM/dd")
-        val duedate = formata.parse(list.dueDate)
-        if (currentDate>duedate && !list.completed){
-            holder.taskTitlea.setBackgroundColor(Color.parseColor("#60FF0000"))// // احمر
-        }
-        else if (list.completed){
-            holder.taskTitlea.setBackgroundColor(Color.parseColor("#9EFF00"))//اخضر
+            val currentDate = Date()
+            val formata = SimpleDateFormat("yyyy/MM/dd")
+            val duedate = formata.parse(list.dueDate)
+            if (currentDate>duedate && !list.completed){
+                holder.taskTitlea.setBackgroundColor(Color.parseColor("#60FF0000"))// // احمر
+            }
+            else if (list.completed){
+                holder.taskTitlea.setBackgroundColor(Color.parseColor("#9EFF00"))//اخضر
 
 
+            }
+            else{
+                holder.taskTitlea.setBackgroundColor(Color.parseColor("#6800B8FF"))//ازرق
+            }
+
         }
-        else{
-            holder.taskTitlea.setBackgroundColor(Color.parseColor("#6800B8FF"))//ازرق
-        }
+
+
+
+
         holder.Completed.setOnClickListener(){
             if(holder.Completed.isChecked){
                 holder.taskTitlea.setBackgroundColor(Color.parseColor("#9EFF00"))//اخضر
@@ -123,7 +130,7 @@ class TodlAdapter(val listTask: List<MainTaskWithSubTask>, val todlViewModel: To
 
         holder.itemView.setOnClickListener{it ->
             todlViewModel.selectedItemId = list.taskId
-         //   todlViewModel.selectedListMutableLiveData.postValue(listTask[position].subTask)//ارسال السب تاسك الخاصة بالمين الى فراقمنت الساب التاسك
+            todlViewModel.selectedListMutableLiveData.postValue(listTask[position].task)//ارسال السب تاسك الخاصة بالمين الى فراقمنت الساب التاسك
             it.findNavController().navigate(R.id.action_todlListFragment2_to_subListFragment)
 
         }
