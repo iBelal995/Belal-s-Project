@@ -83,6 +83,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 - Editing tasks - Using the update feature, you may change the task title and description.
 - Nested tasks - Within the primary task, you can add subtasks.
 - Due date - For each task available, you may add a due date (deadline) to ensure that the task is completed within a certain amount of time. 
+- Due date disable - You can easily ignore the due date by click of button
 - complete check - you can check box any task you added whether it's overdue or not
 - indicators of the status - there is an indicators for each task added of three indicators : in progress, completed, overdue
 - priority - When you create a task, you can set the task's priority using three indicators: High, Medium, and Low
