@@ -18,6 +18,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
   maintainable apps. Start with classes for managing your UI component lifecycle and handling data
   persistence.
 * [Lifecycles][3] - Create a UI that automatically responds to lifecycle events.
+* [LiveData][4] - Build data objects that notify views when the underlying database changes.
 * [Navigation][5] - Handle everything needed for in-app navigation.
 * [Room Database][6] - Access your app's SQLite database with in-app objects and compile-time checks.
   * [ForeignKey][20] - Is used to enforce relational structure when INSERTING / MODYFING your data
