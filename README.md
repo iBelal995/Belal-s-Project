@@ -21,8 +21,8 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 * [LiveData][4] - Build data objects that notify views when the underlying database changes.
 * [Navigation][5] - Handle everything needed for in-app navigation.
 * [Room Database][6] - Access your app's SQLite database with in-app objects and compile-time checks.
-* [ForeignKey][20] - Is used to enforce relational structure when INSERTING / MODYFING your data
-* [one-to-many relationships][21] - A one-to-many relationship between two entities is a relationship where each instance of the parent entity corresponds to zero or more instances of the child entity, but each instance of the child entity can only correspond to exactly one instance of the parent entity
+  * [ForeignKey][20] - Is used to enforce relational structure when INSERTING / MODYFING your data
+  * [one-to-many relationships][21] - A one-to-many relationship between two entities is a relationship where each instance of the parent entity corresponds to zero or more instances of the child entity, but each instance of the child entity can only correspond to exactly one instance of the parent entity
 * [ViewModel][7] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
      asynchronous tasks for optimal execution.
 * [UI][9] - Details on why and how to use UI Components in your apps - together or separate
@@ -48,6 +48,14 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 [12]: https://developer.android.com/guide/topics/ui/declaring-layout
 [14]: https://bumptech.github.io/glide/
 
+## User stories
+- As a TODO LIST app, I'd like to add tasks to the list so that I may better plan my time and save the tasks I want to complete.
+- As a TODO LIST app, I'd like to show the task from the list such that the content of the previously written task can be seen.
+- As a TODO LIST app, I'd like to be able to modify a task from the list in order to change the text of a previously typed task.
+- As a TODO LIST app, I'd like to erase the item from the list, as well as the contents of the previously entered task.
+- As a TODO LIST app, I'd like to update the profession status to indicate whether or not the task has been finished.
+- As a TODO LIST app, I'd like to be able to filter my task list so that I can see what I want from all of my chores.
+- As a TODO LIST app, I'd like to order my task list alphabetically.
 
 
 ### Screenshots Android Studio
