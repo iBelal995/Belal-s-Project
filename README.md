@@ -17,10 +17,8 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 - [Architecture][1] - A collection of libraries that help you design robust, testable, and
   maintainable apps. Start with classes for managing your UI component lifecycle and handling data
   persistence.
- - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Architecture Components provides ViewModel helper class for the UI controller that is responsible for preparing data for the UI,ViewModel objects are automatically retained during configuration changes so that data they hold is immediately available to the next activity or fragment 
 * [Data Binding][2] - Declaratively bind observable data to UI elements.
 * [Lifecycles][3] - Create a UI that automatically responds to lifecycle events.
-* [LiveData][4] - Build data objects that notify views when the underlying database changes.
 * [Navigation][5] - Handle everything needed for in-app navigation.
 * [Room Database][6] - Access your app's SQLite database with in-app objects and compile-time checks.
   * [ForeignKey][20] - Is used to enforce relational structure when INSERTING / MODYFING your data
@@ -72,8 +70,18 @@ It's a well-organized To Do List application on the Android Studio that helps yo
  ![image](https://user-images.githubusercontent.com/91452283/139951626-b777717b-6f28-4ed0-b72c-1885779ad218.png)
  Check ToDo |
  ![image](https://user-images.githubusercontent.com/91452283/139951690-7ac32332-8160-40ce-b8bb-41bbd208e0c9.png)
+ 
+### Software development lifecycle
+![image](https://user-images.githubusercontent.com/91452283/140063117-e6dfcae8-dc42-4300-89cd-cd760809c347.png)
+- Planning :Time mangment, Brain Storming.
+- Analysis : the requirements , what i need , what i am going to do , what if 
+- Design : [Figma](https://www.figma.com/file/kw8AehQEs461F6tmATOSaT/belal-project?node-id=0%3A1)
+- Implementaation : Andriod Studio
+- Testing : Start the app 
+- Maintanance : fixing any problems accure
 ### Screenshots Figma
 ![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
+
 
 ### Favoraite Features 
 - Adding tasks - You can add as many tasks as you want.
