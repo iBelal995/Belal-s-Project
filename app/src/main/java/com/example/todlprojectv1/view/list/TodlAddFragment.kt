@@ -49,9 +49,11 @@ class TodlAddFragment : BottomSheetDialogFragment() {
             val dueDate = calnder.text.toString()
             if (dueDate.isNotEmpty() && !duedateoff.isChecked) {
                     todlViewModel.addList(TodlModelList(task,prio, calnder.text.toString(),creationDate,false))
+                dismiss()
             } else  if (duedateoff.isChecked){
                 todlViewModel.addList(TodlModelList(task,prio, "",creationDate,false))
-                dismiss()}
+                dismiss()
+            }
             else
                 Toast.makeText(requireActivity(), "Please add a due date in the Calendar", Toast.LENGTH_SHORT).show()
         }
