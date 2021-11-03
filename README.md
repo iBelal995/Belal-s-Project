@@ -17,7 +17,6 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 - [Architecture][1] - A collection of libraries that help you design robust, testable, and
   maintainable apps. Start with classes for managing your UI component lifecycle and handling data
   persistence.
-* [Data Binding][2] - Declaratively bind observable data to UI elements.
 * [Lifecycles][3] - Create a UI that automatically responds to lifecycle events.
 * [Navigation][5] - Handle everything needed for in-app navigation.
 * [Room Database][6] - Access your app's SQLite database with in-app objects and compile-time checks.
