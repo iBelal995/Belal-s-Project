@@ -9,7 +9,8 @@ including one or more columns that comprise the primary key.
 /***
  * The following code defines a ItemModel data entity type relation one - many.
  * Define one-to-many relationships
-A one-to-many relationship between two entities is a relationship where each instance of the parent entity corresponds to zero or more instances of the child entity,
+A one-to-many relationship between two entities is a relationship where each instance of the parent
+entity corresponds to zero or more instances of the child entity,
 but each instance of the child entity can only correspond to exactly one instance of the parent entity.
  * Each instance of ItemModel represents a row in a ItemModel table in the app's database.
  * */
@@ -34,8 +35,6 @@ data class TodlModelList(
     onDelete = ForeignKey.CASCADE
 )]
 )
-
-
     data class TodlModelSubList(
     val subTask:String,
     val prioritysub:String,

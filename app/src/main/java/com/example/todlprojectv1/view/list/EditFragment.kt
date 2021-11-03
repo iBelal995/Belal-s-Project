@@ -15,7 +15,8 @@ import com.example.todlprojectv1.view.TodlViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
-
+/**
+ * I create this fragment to be able to edit the main title task */
 class EditFragment : BottomSheetDialogFragment() {
 
     private val todlViewModel: TodlViewModel by activityViewModels()
@@ -25,7 +26,6 @@ class EditFragment : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edit, container, false)
     }
 
@@ -34,6 +34,7 @@ class EditFragment : BottomSheetDialogFragment() {
         val editText:EditText = view.findViewById(R.id.edit_task_title)
         val cancelButton: Button = view.findViewById(R.id.Cancle_button_edittask)
         val editButton: Button = view.findViewById(R.id.edit_text_button)
+        /** these lines to observes the data from the  main task */
         todlViewModel.selectedListMutableLiveData.observe(viewLifecycleOwner, Observer {
             it?.let {
                 editText.setText(it.taskTitle)
