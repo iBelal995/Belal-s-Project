@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.core.view.isEmpty
 import androidx.core.view.isGone
 import androidx.core.view.isNotEmpty
 import androidx.fragment.app.activityViewModels
@@ -44,18 +45,21 @@ class TodlAddFragment : BottomSheetDialogFragment() {
 
         addButton.setOnClickListener {
             val task = taskTitle.text.toString()
-            var priorityRadioButton: RadioButton = view.findViewById(priority.checkedRadioButtonId)
-            var prio = priorityRadioButton.text.toString()
+            var priorityRadioButton: RadioButton? = view.findViewById(priority.checkedRadioButtonId)
+            var prio = priorityRadioButton?.text.toString()
             val dueDate = calnder.text.toString()
-            if (dueDate.isNotEmpty() && !duedateoff.isChecked) {
+
+            if (dueDate.isNotEmpty() && !duedateoff.isChecked && priorityRadioButton != null) {
                     todlViewModel.addList(TodlModelList(task,prio, calnder.text.toString(),creationDate,false))
                 dismiss()
-            } else  if (duedateoff.isChecked){
+            } else  if (duedateoff.isChecked && priorityRadioButton != null){
                 todlViewModel.addList(TodlModelList(task,prio, "",creationDate,false))
                 dismiss()
             }
+
             else
-                Toast.makeText(requireActivity(), "Please add a due date in the Calendar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), "Please fill all the requirement with *", Toast.LENGTH_SHORT).show()
+
         }
             cancleButton.setOnClickListener {
                 dismiss()

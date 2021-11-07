@@ -36,12 +36,18 @@ class SubListAddFragment : BottomSheetDialogFragment() {
 
         addButton.setOnClickListener {
             val subtask = tasksubTitle.text.toString()
-            var subpriorityRadioButton: RadioButton = view.findViewById(prioritysub.checkedRadioButtonId)
-            var subprio = subpriorityRadioButton.text.toString()
+            var subpriorityRadioButton: RadioButton? = view.findViewById(prioritysub.checkedRadioButtonId)
+            var subprio = subpriorityRadioButton?.text.toString()
             var des=description
             var mainId = mainId
+            if(subpriorityRadioButton == null) {
+                Toast.makeText(requireActivity(), "Please pick a priority", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+            else{
             todlViewModel.addsubList(TodlModelSubList(subtask,subprio,des,mainId ))
-            dismiss()
+            dismiss()}
         }
             cancleButton.setOnClickListener {
              dismiss()
