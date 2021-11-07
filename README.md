@@ -5,7 +5,16 @@
 It's a well-organized To Do List application on the Android Studio that helps you manage your daily tasks and lets you make changes simply, such as adding, editing, and removing tasks, among other things!
 
 ### ![Mask Group (1)](https://user-images.githubusercontent.com/91452283/139941414-6e3c6689-e7e5-4af3-a6ed-8d4ab972ad90.png)
-
+### Software development lifecycle
+![image](https://user-images.githubusercontent.com/91452283/140063117-e6dfcae8-dc42-4300-89cd-cd760809c347.png)
+- Planning :Time mangment, Brain Storming.
+- Analysis :The requirements , what i need , what i am going to do , what if 
+- Design : [Figma](https://www.figma.com/file/kw8AehQEs461F6tmATOSaT/belal-project?node-id=0%3A1)
+- Implementaation : Andriod Studio
+- Testing : Test the actions and the features
+- Maintanance : fixing any problems accure
+### Screenshots Figma
+![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
 
 ### Technologies used
 - [Kotlin](https://developer.android.com/kotlin)
@@ -71,16 +80,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
  Check ToDo |
  ![image](https://user-images.githubusercontent.com/91452283/139951690-7ac32332-8160-40ce-b8bb-41bbd208e0c9.png)
  
-### Software development lifecycle
-![image](https://user-images.githubusercontent.com/91452283/140063117-e6dfcae8-dc42-4300-89cd-cd760809c347.png)
-- Planning :Time mangment, Brain Storming.
-- Analysis :The requirements , what i need , what i am going to do , what if 
-- Design : [Figma](https://www.figma.com/file/kw8AehQEs461F6tmATOSaT/belal-project?node-id=0%3A1)
-- Implementaation : Andriod Studio
-- Testing : Test the actions and the features
-- Maintanance : fixing any problems accure
-### Screenshots Figma
-![image](https://user-images.githubusercontent.com/91452283/139952146-59f9251e-ee92-44c7-816d-61f51b0c047b.png)
+
 
 
 ### Favoraite Features 
