@@ -10,7 +10,7 @@ It's a well-organized To Do List application on the Android Studio that helps yo
 - Planning :Time mangment, Brain Storming.
 - Analysis :The requirements , what i need , what i am going to do , what if 
 - Design : [Figma](https://www.figma.com/file/kw8AehQEs461F6tmATOSaT/belal-project?node-id=0%3A1)
-- Implementaation : Andriod Studio
+- Implementation : Andriod Studio
 - Testing : Test the actions and the features
 - Maintanance : fixing any problems accure
 ### Screenshots Figma
